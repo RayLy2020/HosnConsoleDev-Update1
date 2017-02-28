@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: c0ae0f50d5e35414f8f4846339da3c2f
+timeCreated: 1475765619
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerWalk1
+    21300002: PlayerWalk2
+    21300004: PlayerWalk3
+    21300006: PlayerWalk4
+    21300008: PlayerWalk5
+    21300010: PlayerWalk6
+    21300012: PlayerWalk7
+    21300014: PlayerWalk8
+    21300016: PlayerWalk9
+    21300018: PlayerWalk10
+    21300020: PlayerWalk11
+    21300022: PlayerWalk12
+    21300024: PlayerWalk13
+    21300026: PlayerWalk14
+    21300028: PlayerWalk15
+    21300030: PlayerIdleJump1
+    21300032: PlayerIdleJump2
+    21300034: PlayerIdleJump3
+    21300036: PlayerIdleJump4
+    21300038: Player180Turn
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerWalk1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 378
+        width: 76
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 50.5}
+        - {x: -29, y: 50.5}
+        - {x: -33, y: 49.5}
+        - {x: -38, y: -4.5}
+        - {x: -38, y: -50.5}
+        - {x: 21, y: -50.5}
+        - {x: 27, y: -40.5}
+        - {x: 38, y: -3.5}
+        - {x: 38, y: 34.5}
+    - name: PlayerWalk2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 377
+        width: 78
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 50.5}
+        - {x: -16, y: 50.5}
+        - {x: -19, y: 45.5}
+        - {x: -39, y: -7.5}
+        - {x: -39, y: -48.5}
+        - {x: -33, y: -50.5}
+        - {x: 28, y: -50.5}
+        - {x: 39, y: -14.5}
+        - {x: 39, y: 32.5}
+        - {x: 38, y: 37.5}
+    - name: PlayerWalk3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 377
+        width: 76
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 35}
+        - {x: 20, y: 52}
+        - {x: -13, y: 52}
+        - {x: -27, y: 47}
+        - {x: -38, y: 6}
+        - {x: -38, y: -52}
+        - {x: 13, y: -52}
+        - {x: 15, y: -50}
+        - {x: 11, y: -43}
+        - {x: 6, y: -39}
+        - {x: 38, y: 0}
+    - name: PlayerWalk4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 377
+        width: 71
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35.5, y: 4}
+        - {x: 35.5, y: 37}
+        - {x: 15.5, y: 52}
+        - {x: -15.5, y: 52}
+        - {x: -25.5, y: 41}
+        - {x: -35.5, y: -10}
+        - {x: -35.5, y: -41}
+        - {x: -18.5, y: -52}
+        - {x: -0.5, y: -52}
+        - {x: 1.5, y: -51}
+        - {x: 0.5, y: -44}
+        - {x: -1.5, y: -42}
+        - {x: 10.5, y: -14}
+    - name: PlayerWalk5
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 378
+        width: 60
+        height: 101
+      alignment: 9
+      pivot: {x: 0.4073196, y: 0.49160403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.439148, y: 51.347992}
+        - {x: -24.439148, y: 45.347992}
+        - {x: -24.439148, y: -49.652008}
+        - {x: 5.560852, y: -49.652008}
+        - {x: 35.560852, y: -14.652008}
+        - {x: 35.560852, y: 34.347992}
+        - {x: 14.560852, y: 51.347992}
+    - name: PlayerWalk6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 257
+        width: 64
+        height: 98
+      alignment: 9
+      pivot: {x: 0.455832, y: 0.48557827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.826752, y: 50.41333}
+        - {x: -17.173248, y: 50.41333}
+        - {x: -26.173248, y: 48.41333}
+        - {x: -29.173248, y: 12.41333}
+        - {x: -29.173248, y: -46.58667}
+        - {x: -27.173248, y: -47.58667}
+        - {x: 6.8267517, y: -47.58667}
+        - {x: 28.826752, y: -39.58667}
+        - {x: 34.82675, y: -17.58667}
+        - {x: 34.82675, y: 40.41333}
+    - name: PlayerWalk7
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 257
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 49.5}
+        - {x: -23.5, y: 40.5}
+        - {x: -33.5, y: 4.5}
+        - {x: -33.5, y: -49.5}
+        - {x: 14.5, y: -49.5}
+        - {x: 33.5, y: 2.5}
+        - {x: 33.5, y: 32.5}
+        - {x: 14.5, y: 49.5}
+    - name: PlayerWalk8
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 256
+        width: 70
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5289686, y: 0.50393736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.9721985, y: 51.09445}
+        - {x: -22.027802, y: 51.09445}
+        - {x: -26.027802, y: 44.09445}
+        - {x: -37.0278, y: 9.094452}
+        - {x: -37.0278, y: -51.90555}
+        - {x: 32.9722, y: -51.90555}
+        - {x: 32.9722, y: 40.09445}
+        - {x: 30.972198, y: 42.09445}
+    - name: PlayerWalk9
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 258
+        width: 68
+        height: 101
+      alignment: 9
+      pivot: {x: 0.535785, y: 0.5040153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.43338, y: 50.09445}
+        - {x: -36.43338, y: -50.90555}
+        - {x: 28.56662, y: -50.90555}
+        - {x: 31.56662, y: -41.90555}
+        - {x: 31.56662, y: 50.09445}
+    - name: PlayerWalk10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 72
+        height: 103
+      alignment: 9
+      pivot: {x: 0.53942955, y: 0.5118124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.838928, y: 50.283325}
+        - {x: -25.838928, y: 40.283325}
+        - {x: -38.83893, y: -1.7166748}
+        - {x: -38.83893, y: -52.716675}
+        - {x: 15.161072, y: -52.716675}
+        - {x: 33.16107, y: -43.716675}
+        - {x: 33.16107, y: 35.283325}
+        - {x: 10.161072, y: 50.283325}
+    - name: PlayerWalk11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 134
+        width: 78
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5748769, y: 0.5027002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.159607, y: 51.221878}
+        - {x: -13.840393, y: 51.221878}
+        - {x: -15.840393, y: 50.221878}
+        - {x: -23.840393, y: 45.221878}
+        - {x: -44.840393, y: -24.778122}
+        - {x: -44.840393, y: -42.778122}
+        - {x: -17.840393, y: -37.778122}
+        - {x: -10.840393, y: -48.778122}
+        - {x: -6.840393, y: -51.778122}
+        - {x: 13.159607, y: -51.778122}
+        - {x: 25.159607, y: -21.778122}
+        - {x: 33.159607, y: 3.221878}
+        - {x: 33.159607, y: 38.221878}
+    - name: PlayerWalk12
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 133
+        width: 65
+        height: 102
+      alignment: 9
+      pivot: {x: 0.48288527, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.387543, y: 51}
+        - {x: -20.387543, y: 41}
+        - {x: -20.387543, y: 4}
+        - {x: -31.387543, y: -20}
+        - {x: -31.387543, y: -41}
+        - {x: -21.387543, y: -51}
+        - {x: 0.6124573, y: -51}
+        - {x: 33.612457, y: 5}
+        - {x: 33.612457, y: 33}
+        - {x: 12.612457, y: 51}
+    - name: PlayerWalk13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 133
+        width: 61
+        height: 101
+      alignment: 9
+      pivot: {x: 0.427052, y: 0.4944928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.05017, y: 51.05623}
+        - {x: -26.05017, y: 38.05623}
+        - {x: -26.05017, y: -49.94377}
+        - {x: -1.0501709, y: -49.94377}
+        - {x: 34.94983, y: 3.0562286}
+        - {x: 34.94983, y: 45.05623}
+        - {x: 21.94983, y: 51.05623}
+    - name: PlayerWalk14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 134
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 49}
+        - {x: -29, y: 2}
+        - {x: -33, y: -20}
+        - {x: -33, y: -49}
+        - {x: 9, y: -49}
+        - {x: 33, y: -22}
+        - {x: 33, y: 35}
+        - {x: 24, y: 49}
+    - name: PlayerWalk15
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 135
+        width: 72
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -32}
+        - {x: 36, y: 37}
+        - {x: 26, y: 50}
+        - {x: -21, y: 50}
+        - {x: -34, y: 21}
+        - {x: -36, y: -11}
+        - {x: -36, y: -50}
+        - {x: -22, y: -50}
+        - {x: -13, y: -36}
+        - {x: -2, y: -50}
+        - {x: 24, y: -50}
+    - name: PlayerIdleJump1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 5
+        width: 56
+        height: 110
+      alignment: 9
+      pivot: {x: 0.3232934, y: 0.5407785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.895569, y: 50.51436}
+        - {x: -18.104431, y: 50.51436}
+        - {x: -18.104431, y: -59.48564}
+        - {x: 12.895569, y: -59.48564}
+        - {x: 37.89557, y: -4.4856415}
+        - {x: 37.89557, y: 24.514359}
+        - {x: 36.89557, y: 29.514359}
+    - name: PlayerIdleJump2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 5
+        width: 56
+        height: 109
+      alignment: 9
+      pivot: {x: 0.3232934, y: 0.5407785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.895569, y: 50.05514}
+        - {x: -18.104431, y: 50.05514}
+        - {x: -18.104431, y: -56.94486}
+        - {x: -15.104431, y: -58.94486}
+        - {x: 15.895569, y: -58.94486}
+        - {x: 37.89557, y: 0.05514145}
+        - {x: 37.89557, y: 23.055141}
+        - {x: 36.89557, y: 28.055141}
+    - name: PlayerIdleJump3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 5
+        width: 56
+        height: 109
+      alignment: 9
+      pivot: {x: 0.3232934, y: 0.5407785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.895569, y: 50.05514}
+        - {x: -12.104431, y: 50.05514}
+        - {x: -18.104431, y: 47.05514}
+        - {x: -18.104431, y: -54.94486}
+        - {x: -12.104431, y: -58.94486}
+        - {x: 9.895569, y: -58.94486}
+        - {x: 12.895569, y: -51.94486}
+        - {x: 37.89557, y: -8.944859}
+        - {x: 37.89557, y: 27.055141}
+    - name: PlayerIdleJump4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 5
+        width: 56
+        height: 109
+      alignment: 9
+      pivot: {x: 0.3232934, y: 0.5407785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.895569, y: 50.05514}
+        - {x: -18.104431, y: 50.05514}
+        - {x: -18.104431, y: -58.94486}
+        - {x: 14.895569, y: -58.94486}
+        - {x: 37.89557, y: -10.944859}
+        - {x: 37.89557, y: 39.05514}
+        - {x: 36.89557, y: 40.05514}
+    - name: Player180Turn
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 5
+        width: 58
+        height: 110
+      alignment: 9
+      pivot: {x: 0.3232934, y: 0.5407785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.248962, y: 30.514359}
+        - {x: 18.248962, y: 49.51436}
+        - {x: 14.248962, y: 50.51436}
+        - {x: -17.751038, y: 50.51436}
+        - {x: -18.751038, y: 48.51436}
+        - {x: -18.751038, y: -52.48564}
+        - {x: -12.751038, y: -59.48564}
+        - {x: 11.248962, y: -59.48564}
+        - {x: 18.248962, y: -52.48564}
+        - {x: 39.248962, y: -7.4856415}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
