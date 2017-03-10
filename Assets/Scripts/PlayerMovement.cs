@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -28,14 +29,14 @@ public class PlayerMovement : MonoBehaviour {
         Flip(horizontal);
 	}
 
-    private void HandleMovement(float horizontal)
+    private void HandleMovement(float horizontal) // Movement scripts
     { 
         myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
 
         myAnimator.SetFloat("Speed", Mathf.Abs (horizontal));
     }
 
-    private void Flip(float horizontal)
+    private void Flip(float horizontal) // Character flip handling
     {
         if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col) //Door scripts
     {
         if (col.gameObject.tag == "Door")
         {
@@ -93,12 +94,24 @@ public class PlayerMovement : MonoBehaviour {
             this.gameObject.transform.localPosition = new Vector3(2.41f, -6.39f, 0f);
         }
 
-        /*if (col.gameObject.tag == "Door3" && Input.GetKeyDown(KeyCode.UpArrow))
+        if (col.gameObject.tag == "Door3" && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            this.gameObject.transform.localPosition = new Vector3(-13f, -10.55f, 0f);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+          
         }
-        */
         
+
     }
+        //Pick up Item Scripts
+        void OnTriggerEnter2D(Collider2D other) 
+    {
+            if (other.gameObject.CompareTag("Beer"))
+            {
+                other.gameObject.SetActive(false);
+            }
+
+           
+
+        }
 
 }
