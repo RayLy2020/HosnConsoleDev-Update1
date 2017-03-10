@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D myRigidbody;
-
+    public Sprite beerSprite;
     private Animator myAnimator;
+    private bool hasBeer = false;
 
     [SerializeField]
     private float movementSpeed;
@@ -27,7 +29,13 @@ public class PlayerMovement : MonoBehaviour {
         HandleMovement(horizontal);
 
         Flip(horizontal);
-	}
+
+
+        if (Input.GetKeyDown(KeyCode.E) && hasBeer == true)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().currentHealth = 100;
+        }
+    }
 
     private void HandleMovement(float horizontal) // Movement scripts
     { 
@@ -108,6 +116,9 @@ public class PlayerMovement : MonoBehaviour {
             if (other.gameObject.CompareTag("Beer"))
             {
                 other.gameObject.SetActive(false);
+            GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
+            GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = beerSprite;
+            hasBeer = true;
             }
 
            
