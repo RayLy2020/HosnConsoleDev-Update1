@@ -94,9 +94,9 @@ public class PlayerMovement : MonoBehaviour {
             this.gameObject.transform.localPosition = new Vector3(2.41f, -6.39f, 0f);
         }
 
-        if (col.gameObject.tag == "Door3" && Input.GetKeyDown(KeyCode.UpArrow))
+        if (col.gameObject.tag == "Door9" && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.LoadScene(6, LoadSceneMode.Single);
           
         }
         
