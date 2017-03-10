@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D myRigidbody;
     public Sprite beerSprite;
+    public Sprite batterySprite;
     private Animator myAnimator;
     private bool hasBeer = false;
+    private bool iconSlot1Full = false;
 
     [SerializeField]
     private float movementSpeed;
@@ -119,8 +121,29 @@ public class PlayerMovement : MonoBehaviour {
             GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
             GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = beerSprite;
             hasBeer = true;
+            iconSlot1Full = true;
+            }
+            
+            if(other.CompareTag("DeathTrigger"))
+            {
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().currentHealth = 0;
             }
 
+            if(other.CompareTag("Battery"))
+        {
+            other.gameObject.SetActive(false);
+
+            if(iconSlot1Full)
+            {
+                GameObject.FindWithTag("IconSlot2").GetComponent<Image>().color = Color.white;
+                GameObject.FindWithTag("IconSlot2").GetComponent<Image>().sprite = batterySprite;
+            }
+            else
+            {
+                GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
+                GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = batterySprite;
+            }
+        }
            
 
         }
