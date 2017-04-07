@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && hasBeer == true)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().currentHealth = 100;
+            
         }
     }
 
