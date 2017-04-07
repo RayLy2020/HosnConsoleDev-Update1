@@ -76,12 +76,12 @@ public class PlayerMovement : MonoBehaviour {
 
         if (col.gameObject.tag == "Door3" && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            this.gameObject.transform.localPosition = new Vector3(-13f, -10.55f, 0f);
+            //this.gameObject.transform.localPosition = new Vector3(-13f, -10.55f, 0f);
         }
 
         if (col.gameObject.tag == "Door4" && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            this.gameObject.transform.localPosition = new Vector3(-3.08f, -6.38f, 0f);
+            //this.gameObject.transform.localPosition = new Vector3(-3.08f, -6.38f, 0f);
         }
 
         if (col.gameObject.tag == "Door5" && Input.GetKeyDown(KeyCode.UpArrow))
