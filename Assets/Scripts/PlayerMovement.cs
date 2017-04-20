@@ -57,6 +57,7 @@ public class PlayerMovement : NetworkBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && hasBeer == true)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().currentHealth = 100;
+<<<<<<< HEAD
             hasBeer = false;
             GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = null;
             GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.black;
@@ -69,6 +70,9 @@ public class PlayerMovement : NetworkBehaviour {
             GameObject.FindWithTag("IconSlot2").GetComponent<Image>().sprite = null;
             GameObject.FindWithTag("IconSlot2").GetComponent<Image>().color = Color.black;
             hasBattery = false;
+=======
+            
+>>>>>>> ade574ed77c664f87af85e8ffb53393106fc6a02
         }
     }
 
