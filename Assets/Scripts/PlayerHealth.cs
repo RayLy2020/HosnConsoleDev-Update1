@@ -1,21 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
-public class PlayerHealth : MonoBehaviour {
+public class PlayerHealth : NetworkBehaviour {
     
-    public float maxHealth = 100f;
-    public float currentHealth = 0f;
+    public const float maxHealth = 100f;
+    public float currentHealth = maxHealth;
     public GameObject healthBar;
 
     [SerializeField] bool inLight = true;
 
+    void Awake()
+    {
+        currentHealth = maxHealth;
+
+        InvokeRepeating("decreaseHealth", 0.0f, 0.1f);
+        healthBar = GameObject.FindWithTag("HealthBar");
+    }
 	// Use this for initialization
 	void Start () {
-        currentHealth = maxHealth;
-        
-        InvokeRepeating("decreaseHealth", 0.0f, 0.1f);
+
 	
 	}
+
+    [ClientRpc]
+    void RpcRespawn()
+    {
+        if (isLocalPlayer)
+        {
+            // move back to zero location
+            transform.position = Vector3.zero;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,9 +57,8 @@ public class PlayerHealth : MonoBehaviour {
 
         if (collision.gameObject.tag == "Light")
         {
-            currentHealth = currentHealth;
-
-
+            return;
+            //currentHealth = currentHealth;
         }
 
         float calculateHealth = currentHealth / maxHealth;
@@ -74,6 +90,10 @@ public class PlayerHealth : MonoBehaviour {
 
     void decreaseHealth()
     {
+        if(!isServer)
+        {
+            return;
+        }
         if(inLight == false)
         {
             currentHealth -= 0.2f;
@@ -89,19 +109,21 @@ public class PlayerHealth : MonoBehaviour {
         if (currentHealth < 0f)
         {
             currentHealth = 0f;
-            Application.LoadLevel("GameOver");
+            RpcRespawn();
+            currentHealth = maxHealth;
+            //SceneManager.LoadScene("GameOver");
         }
 
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
-
+        /*
         if (maxHealth < 1f)
         {
             maxHealth = 1f;
         }
-
+        */
     }
 
 }

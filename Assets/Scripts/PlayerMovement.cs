@@ -2,15 +2,18 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : NetworkBehaviour {
 
     private Rigidbody2D myRigidbody;
     public Sprite beerSprite;
     public Sprite batterySprite;
     private Animator myAnimator;
-    private bool hasBeer = false;
-    private bool iconSlot1Full = false;
+    public bool hasBeer = false;
+    public bool hasBattery = false;
+    public Camera cam;
+    public GameObject flashPanel;
 
     [SerializeField]
     private float movementSpeed;
@@ -22,10 +25,28 @@ public class PlayerMovement : MonoBehaviour {
         facingRight = true;
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        
 	}
 	
+    void Awake()
+    {
+        flashPanel = GameObject.FindWithTag("FlashPanel");
+    }
+
+    void Update()
+    {
+        
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if (!isLocalPlayer)
+        {
+            cam.enabled = false;
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
 
         HandleMovement(horizontal);
@@ -36,7 +57,26 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && hasBeer == true)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().currentHealth = 100;
+            hasBeer = false;
+            GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = null;
+            GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.black;
         }
+
+        if(Input.GetKeyDown(KeyCode.R) && hasBattery == true)
+        {
+            
+            StartCoroutine(FlashScreen());
+            GameObject.FindWithTag("IconSlot2").GetComponent<Image>().sprite = null;
+            GameObject.FindWithTag("IconSlot2").GetComponent<Image>().color = Color.black;
+            hasBattery = false;
+        }
+    }
+
+    IEnumerator FlashScreen()
+    {
+        flashPanel.gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.95f);
+        yield return new WaitForSeconds(0.35f);
+        flashPanel.gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
     }
 
     private void HandleMovement(float horizontal) // Movement scripts
@@ -57,71 +97,15 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay2D(Collider2D col) //Door scripts
-    {
-        if (col.gameObject.tag == "Door")
-        {
-            Debug.Log("WORKKING");
-        }
-
-        if (col.gameObject.tag == "Door" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(-19f, -10.55f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door2" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(-8.85f, -6.38f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door3" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            //this.gameObject.transform.localPosition = new Vector3(-13f, -10.55f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door4" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            //this.gameObject.transform.localPosition = new Vector3(-3.08f, -6.38f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door5" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(-7f, -10.55f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door6" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(5.52f, -6.38f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door7" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(4.67f, -2.47f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door8" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.gameObject.transform.localPosition = new Vector3(2.41f, -6.39f, 0f);
-        }
-
-        if (col.gameObject.tag == "Door9" && Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            SceneManager.LoadScene(6, LoadSceneMode.Single);
-          
-        }
-        
-
-    }
         //Pick up Item Scripts
         void OnTriggerEnter2D(Collider2D other) 
-    {
+        {
             if (other.gameObject.CompareTag("Beer"))
             {
                 other.gameObject.SetActive(false);
-            GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
-            GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = beerSprite;
-            hasBeer = true;
-            iconSlot1Full = true;
+                GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
+                GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = beerSprite;
+                hasBeer = true;
             }
             
             if(other.CompareTag("DeathTrigger"))
@@ -130,22 +114,13 @@ public class PlayerMovement : MonoBehaviour {
             }
 
             if(other.CompareTag("Battery"))
-        {
-            other.gameObject.SetActive(false);
-
-            if(iconSlot1Full)
             {
+                other.gameObject.SetActive(false);
                 GameObject.FindWithTag("IconSlot2").GetComponent<Image>().color = Color.white;
                 GameObject.FindWithTag("IconSlot2").GetComponent<Image>().sprite = batterySprite;
+                hasBattery = true;
             }
-            else
-            {
-                GameObject.FindWithTag("IconSlot").GetComponent<Image>().color = Color.white;
-                GameObject.FindWithTag("IconSlot").GetComponent<Image>().sprite = batterySprite;
-            }
-        }
            
-
-        }
+         }
 
 }

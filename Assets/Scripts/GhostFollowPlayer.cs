@@ -8,6 +8,10 @@ public class GhostFollowPlayer : MonoBehaviour {
     public GameObject Light;
     private Animator anim;
 
+    void Awake()
+    {
+        
+    }
 
     void Start()
     {
@@ -16,7 +20,14 @@ public class GhostFollowPlayer : MonoBehaviour {
 
     void Update()
     {
-
+        if(GameObject.FindWithTag("Player") == null)
+        {
+            return;
+        }
+        else
+        {
+            target = GameObject.FindWithTag("Player").transform;
+        }
         //rotate to look at the player
         transform.LookAt(target.position);
         transform.Rotate(new Vector3(0, 90, 0), Space.Self);//correcting the original rotation
