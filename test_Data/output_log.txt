@@ -11,67 +11,41 @@ Default GameObject Tag: Player already registered
 (Filename:  Line: 90)
 
 Begin MonoManager ReloadAssembly
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.027 seconds
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: E:\Unity\CONSOLEDEVFIRAS\HosnConsoleDev-Update1\test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.021 seconds
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Hirotaka\Desktop\HosnConsoleDev-Update1-master\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.928621 ms
+UnloadTime: 0.914870 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 104dc -> priority: 1 
-  Thread -> id: fcc4 -> priority: 1 
+  Thread -> id: 5c0c -> priority: 1 
+  Thread -> id: 1444c -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.265947 ms
+UnloadTime: 3.947078 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2252.
-Total: 0.789942 ms (FindLiveObjects: 0.159743 ms CreateObjectMapping: 0.042715 ms MarkObjects: 0.521947 ms  DeleteObjects: 0.064950 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 381.
+Total: 5.649843 ms (FindLiveObjects: 0.025161 ms CreateObjectMapping: 0.011702 ms MarkObjects: 0.139849 ms  DeleteObjects: 5.472837 ms)
 
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.235519 ms
 
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2503.
+Total: 0.674961 ms (FindLiveObjects: 0.116150 ms CreateObjectMapping: 0.029549 ms MarkObjects: 0.471917 ms  DeleteObjects: 0.057051 ms)
 
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:56890}
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:61035}
 ServerDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-AHH
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-AHH
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

@@ -21,5 +21,8 @@ public class menuUI : MonoBehaviour {
     {
         SceneManager.LoadScene(IndexNum, LoadSceneMode.Single);
     }
-
+    public void ChangeSceneString(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }

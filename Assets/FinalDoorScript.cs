@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
-public class FinalDoorScript : MonoBehaviour {
+public class FinalDoorScript : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -17,9 +18,10 @@ public class FinalDoorScript : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow) || other.CompareTag("Player") && Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
-            SceneManager.LoadScene("WinGame");
+            //SceneManager.LoadScene("Win");
+            NetworkManager.singleton.ServerChangeScene("Win");
         }
     }
 }

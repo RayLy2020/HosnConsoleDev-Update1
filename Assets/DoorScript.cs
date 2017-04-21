@@ -19,7 +19,7 @@ public class DoorScript : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.UpArrow) || other.CompareTag("Player") && Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             other.transform.position = teleportLocation.transform.position;
             //gameObject.AddComponent<NetworkStartPosition>();
